@@ -1,0 +1,11 @@
+.div-contador{
+    height: 24vh;
+    font-size: xxx-large;
+    background: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    color: azure;
+  }

@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './Register.css'
-import React from 'react'
+// import React from 'react'
 function Register() {
 
   return (

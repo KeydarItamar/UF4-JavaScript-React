@@ -1,0 +1,7 @@
+.btnClick, .btnReiniciar {
+    padding: 0.5rem;
+    font-size: large;
+    color: aliceblue;
+    background-color: blueviolet;
+    border-radius: 10px;
+}
