@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-function Contadorbox(  count  ) {
+function Contadorbox( count ) {
   return (
     <div className="div-contador" >
       {count.count}
