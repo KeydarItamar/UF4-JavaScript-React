@@ -3,35 +3,40 @@
 import React from "react";
 import { useState } from "react";
 
+
 export default function Formulari (props){
+
+function creatasca(titol) {
+    return {
+        id: Math.floor(Math.random() * 10000),
+        titol,
+        completada: false,
+    }
+    }
+
 const  [textTasca, setTextTasca] = useState('')
 
-    const canviTextTasca = e => {
-        setTextTasca(e.target.value);
-        console.log('value is:', e.target.value);
-        };
+const canviTextTasca = e => {
+    setTextTasca(e.target.value);
+    };
 
     const enviarForm = e => {
         e.preventDefault();
-        if (textTasca.trim() !== '') {
-            const tascaNova = {
-            titol: textTasca,
-            completada: false
-            };
-            props.funcAfegirTasca(tascaNova);
-            setTextTasca('');
-        }
+        const tascaNova = creatasca(textTasca)
+        props.funcAfegirTasca(tascaNova);
+        setTextTasca('');
     }
+    
 
     return (
         <form onSubmit={enviarForm}>
-        <input
+        <input className="input-form"
           id="tascaInput"
           type="text"
           value={textTasca}
           onChange={canviTextTasca}
         />
-        <button type="submit">Afegir tasca</button>
+        <button disabled={textTasca.length === 0} type="submit">Afegir tasca</button>
       </form>
     )
 }

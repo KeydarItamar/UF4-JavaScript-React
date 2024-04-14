@@ -11,35 +11,30 @@ export default function Llistat() {
     const tascaNova = [...tasques, novaTasca];
     setTasques(tascaNova);
   };
+
   const eliminarTasca = id => {
-    const tasquesRestants = tasques.filter(tasca => tasques[id].titol != tasca.titol);
+    const tasquesRestants = tasques.filter(tasca => tasca.id != id);
     setTasques(tasquesRestants);
   };
   
-  const completarTasca = id => {
-    const tasquesActuals = tasques.map(tasca => {
-      console.log(tasca)
-      if (tasques[id].titol == tasca.titol) {
-        console.log(tasca.completada)
-        return { ...tasca, completada: !tasca.completada };
-      }
-      return tasca;
-    });
-    setTasques(tasquesActuals);
-  };
+
+  const editarTasca = (tascaAeditar) => {
+    const tasquesActuals= tasques.map((tasca) => 
+    tasca.id === tascaAeditar.id ? tascaAeditar : tasca
+    )
+    setTasques(tasquesActuals)
+  }
   
 
   return (
     <>
     <h1>Llistat de tasques</h1>
       <Formulari funcAfegirTasca={afegirTasca} />
-      {tasques.map((tasca, index) => (
+      {tasques.map((tasca) => (
         <Tasca 
-        key={index}
-        id= {index}
-        text= {tasca.titol}
-        completada = {tasca.completada} 
-        funcCompletarTasca = {completarTasca}
+        key={tasca.id}
+        tasca = {tasca}
+        funcEditarTasca = {editarTasca}
         funcEliminarTasca = {eliminarTasca}
         />
       ))}
