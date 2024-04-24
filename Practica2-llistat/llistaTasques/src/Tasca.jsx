@@ -2,35 +2,38 @@
 
 import { useState } from "react";
 
-export default function Tasca(props){
+export default function Tasca(props) {
+  const { tasca, funcEditarTasca, funcEliminarTasca } = props;
+  const [completadaClass, setCompletadaClass] = useState("tascaNoCompletada");
+  const [editar, setEditar] = useState(false);
 
-  const { tasca, funcEditarTasca,  funcEliminarTasca } = props;
-  const [completadaClass, setCompletadaClass] = useState('tascaNoCompletada')
-  const [editar, setEditar] = useState(false)
-
-  const handleCheckboxClick = () =>{ funcEditarTasca({
-    ...tasca,
-    completada: !tasca.completada
-  })
-    setCompletadaClass(!tasca.completada ? 'tascaCompleta' : 'tascaNoCompletada')
-  }
+  const handleCheckboxClick = () => {
+    funcEditarTasca({
+      ...tasca,
+      completada: !tasca.completada,
+    });
+    setCompletadaClass(
+      !tasca.completada ? "tascaCompleta" : "tascaNoCompletada"
+    );
+  };
 
   const handleEliminarClick = () => {
-    console.log(tasca.id)
+    console.log(tasca.id);
     funcEliminarTasca(tasca.id);
   };
 
   const handleEditarClick = () => {
-    setEditar(!editar)
-  }
+    setEditar(!editar);
+  };
 
-  const handlerEditarTasca = (e) => {funcEditarTasca({
+  const handlerEditarTasca = (e) => {
+    funcEditarTasca({
       ...tasca,
-      titol: e.target.value
-  })
-  }
+      titol: e.target.value,
+    });
+  };
   return (
-    <div className={completadaClass}   >
+    <div className={completadaClass}>
       <input
         type="checkbox"
         id={tasca.id}
@@ -38,7 +41,7 @@ export default function Tasca(props){
         onChange={handleCheckboxClick}
       />
       <div>
-      {editar === true ? (
+        {editar === true ? (
           <input
             type="text"
             value={tasca.titol}
@@ -49,9 +52,13 @@ export default function Tasca(props){
         )}
       </div>
       <div className="btns">
-        <button className="btn" onClick={handleEliminarClick}>Borrar</button>
-        <button className="btn" onClick={handleEditarClick}>{editar ? "Guardar" : "Editar"}</button>
-      </div> 
+        <button className="btn" onClick={handleEliminarClick}>
+          Borrar
+        </button>
+        <button className="btn" onClick={handleEditarClick}>
+          {editar ? "Guardar" : "Editar"}
+        </button>
+      </div>
     </div>
   );
 }

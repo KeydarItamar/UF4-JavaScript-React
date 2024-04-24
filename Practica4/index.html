@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <label>Inserta un numero para ver si es par:</label>
+    <br>
+    <input type="number" id="inpuNum" onchange="esPar()" >
+    <br>
+    <span id="rp-numPar"></span>
+<!-- ///////// -->
+
+    <label>Inserta un numero para ver si es mayor a 0 y menor que 10:</label>
+    <br>
+    <input type="number" id="mayorQue" onchange="esMayor()" >
+    <br>
+    <span id="rp-numMayor"></span>
+<!-- ////////////// -->
+
+    <label>Introduce una letra y comprobaremos si es una vocal</label>
+    <br>
+    <input type="text" id="esVocal" onchange="esVocal()" maxlength="1" >
+    <br>
+    <span id="rp-esVocal"></span>
+
+<!-- /////////////////// -->
+    <label>Introduce dos numero a dividir:</label>
+    <br>
+    <input type="number" id="numA" >
+    <input type="number" id="numB" >
+    <br>
+    <button onclick="division(document.getElementById('numA').value, document.getElementById('numB').value)">Dividir</button>
+    <span id="rp-div"></span>
+
+</body>
+</html>
