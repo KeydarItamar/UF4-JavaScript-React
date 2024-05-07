@@ -1,0 +1,13 @@
+.card{
+    max-width: 35%;
+    border-radius: 15px;
+    background-color: #4d4c4c;
+    border-color: #4e2e2e;
+    color: #fff;
+    transition: transform 0.3s ease;
+    margin: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(5deg); 
+}
