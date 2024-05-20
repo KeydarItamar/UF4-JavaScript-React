@@ -1,13 +1,27 @@
 .card{
-    max-width: 35%;
+    max-width: 50%;
     border-radius: 15px;
+    font-size: larger;
+    height: 20vh;
     background-color: #4d4c4c;
-    border-color: #4e2e2e;
+    border: 1px solid rgba(233, 222, 7, 0.818);;
     color: #fff;
     transition: transform 0.3s ease;
     margin: 1rem;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}   
 
+.link{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    
+}
 .card:hover {
     transform: scale(1.05) rotate(5deg); 
 }

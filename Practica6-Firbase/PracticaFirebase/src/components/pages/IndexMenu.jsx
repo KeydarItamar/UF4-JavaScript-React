@@ -7,8 +7,8 @@ import '../styles/indexMenu.css';
 const IndexMenu = () => {
   return (
     <div className='index-container'> 
-       <Card tittle='Ir a lista de peliculas'></Card> 
-       <Card tittle='Añadir pelicula'></Card> 
+       <Card img='/src/components/img/movies.png' tittle='Ir a lista de peliculas' link="/movies/list"></Card> 
+       <Card img='/src/components/img/addmovie.png' tittle='Añadir pelicula' link="/movies/add"></Card> 
     </div>
   );
 };

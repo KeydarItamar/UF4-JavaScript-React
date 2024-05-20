@@ -2,10 +2,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './../styles/card.css'
-const Card = ({tittle}) => {
+import { Link } from 'react-router-dom';
+const Card = ({tittle, link, img}) => {
   return (
     <div className='card'>
-      <h3>{tittle}</h3>
+      <img className='icono' src={img} alt="" />
+      <Link className='link' to={link}>{tittle}</Link>
     </div>
   );
 };

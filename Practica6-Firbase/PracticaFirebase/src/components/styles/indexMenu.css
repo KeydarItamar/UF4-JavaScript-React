@@ -3,3 +3,56 @@
     justify-content: center;
     align-items: center;
 }
+
+
+.card-welcome{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    height: 20vh;
+    border-radius: 15px;
+    background-color: #4d4c4c;
+    border-color: #4e2e2e;
+    color: #fff;
+}
+input{
+    height: 1.5rem;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+
+.frm{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: #4d4c4c;
+    border: 1px solid rgba(233, 222, 7, 0.818);;
+    color: #fff;
+  }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+h2, h3{
+    color: rgba(233, 222, 7, 0.818);
+}
+input{
+    width: calc(100% - 2rem);
+    background-color: rgba(7, 116, 233, 0.468);
+    color: #fff;
+    
+}
+
+textarea{
+    width: calc(100% - 2rem);
+    background-color: rgba(7, 116, 233, 0.468);
+    color: #fff;
+    border-radius: 15px;
+    margin: 1rem;
+}
+

@@ -31,3 +31,68 @@ body {
   background-color: #333;
 }
 
+.movies{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  height: calc(100vh - 4rem);
+}
+
+.movie-card {
+  height: 30vh;
+  position: relative;
+  width: 280px; /* Ajusta el ancho según sea necesario */
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-fondo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.movie-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center  ;
+  align-items: baseline;
+}
+
+.movie-details h3 {
+  margin-top: 0;
+  margin-bottom: 0; 
+}
+
+.movie-details p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: small;
+}
+
+.movie-card:hover .movie-details {
+  background-color: rgba(0, 0, 0, 0.9);
+  size: 1.4;
+}
+
+.icono{
+  height: 60%;
+  margin-right: 1rem;
+}
+
+.desc{
+  color: burlywood;
+}

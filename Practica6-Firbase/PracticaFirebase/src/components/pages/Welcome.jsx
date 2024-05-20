@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../styles/indexMenu.css';
 
 
 
@@ -17,13 +18,18 @@ const handleSubmit = (e) => {
    setShowUserName(true)
 }
 return (
-    <div className='card'>
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={userName} onChange={handleUserName} />
-                <button type='submit' >enviar</button>
-            </form>
-        {!showUserName ?  <p>Como te llamas?</p> :
-            <span>
+    <div className='card-welcome'>
+        <h3>Bienvenido a mi practica!</h3>
+          {!showUserName ? 
+             <div>
+                <p>Como te llamas?</p>
+                <form onSubmit={handleSubmit}>
+                        <input type="text" value={userName} onChange={handleUserName} />
+                        <br />
+                    </form>
+                    
+             </div> :
+                <span>
                 <p>Hola {userName}</p>
                 <Link to="/indexMenu">Peliculas para el Verano</Link>
                 </span>
